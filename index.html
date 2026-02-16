@@ -177,6 +177,35 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
+
+        .hero-image {
+            margin: 30px 0;
+        }
+
+        .main-img {
+            max-width: 100%;
+            width: 500px;
+            border-radius: 20px;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .main-img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .roast-img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -188,6 +217,11 @@
     <div class="container">
         <h1>Another Sheet</h1>
         <p class="subtitle">Because one sheet is never enough!</p>
+
+        <div class="hero-image">
+            <img src="funny-team.jpg" alt="The Another Sheet Team" class="main-img">
+            <p class="image-caption">The Legendary Team Behind Another Sheet 😂</p>
+        </div>
 
         <div class="team-section">
             <div class="team-card investor">
