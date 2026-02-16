@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard', cursive;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .funny-box {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .joke {
+            font-size: 1.3rem;
+            margin: 15px 0;
+        }
+
+        .emoji {
+            font-size: 5rem;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: #ee5a5a;
+            transform: scale(1.1);
+        }
+
+        .floating {
+            position: absolute;
+            font-size: 3rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        .sheet1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .sheet2 { top: 20%; right: 15%; animation-delay: 1s; }
+        .sheet3 { bottom: 15%; left: 20%; animation-delay: 2s; }
+        .sheet4 { bottom: 25%; right: 10%; animation-delay: 3s; }
+
+        footer {
+            margin-top: 40px;
+            opacity: 0.7;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+        }
+
+        .team-card.inventor {
+            border: 3px solid gold;
+        }
+
+        .team-card.founder {
+            border: 3px solid #00ff88;
+        }
+
+        .role-badge {
+            background: gold;
+            color: black;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .founder .role-badge {
+            background: #00ff88;
+        }
+
+        .team-emoji {
+            font-size: 4rem;
+            margin: 15px 0;
+        }
+
+        .team-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .ankit-box {
+            border: 3px dashed #ff6b6b;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .ankit-name {
+            font-size: 3rem;
+            color: #ff6b6b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating sheet1">📄</div>
+    <div class="floating sheet2">📃</div>
+    <div class="floating sheet3">📝</div>
+    <div class="floating sheet4">🧻</div>
+
+    <div class="container">
+        <h1>Another Sheet</h1>
+        <p class="subtitle">Because one sheet is never enough!</p>
+
+        <div class="team-section">
+            <div class="team-card inventor">
+                <span class="role-badge">Inventor</span>
+                <div class="team-emoji">🦸‍♂️</div>
+                <h3>Tony Stark</h3>
+                <p>"I am Iron Sheet"</p>
+            </div>
+            <div class="team-card founder">
+                <span class="role-badge">Founder</span>
+                <div class="team-emoji">👑</div>
+                <h3>Amit</h3>
+                <p>The Big Boss</p>
+            </div>
+        </div>
+
+        <div class="funny-box ankit-box">
+            <div class="emoji">🤡</div>
+            <h2>Employee of the Month</h2>
+            <h1 class="ankit-name">ANKIT</h1>
+            <p class="joke">"The guy who always forgets the sheets"</p>
+            <p class="joke">🎯 Skills: Running out of paper at the worst time</p>
+            <p class="joke">🏆 Achievement: Used 47 sheets for one page of notes</p>
+            <p class="joke">📍 Location: Probably lost somewhere</p>
+            <p class="joke">💼 Job Title: Chief Sheet Waster</p>
+        </div>
+
+        <div class="funny-box">
+            <p class="joke" id="ankit-roast">Loading roast for Ankit...</p>
+        </div>
+
+        <button class="btn" onclick="roastAnkit()">Roast Ankit Again! 🔥</button>
+
+        <footer>
+            <p>Made with 💜 by Tony Stark & Amit</p>
+            <p>Ankit was no help at all 😂</p>
+        </footer>
+    </div>
+
+    <script>
+        const ankitRoasts = [
+            "Ankit once printed a blank page and said 'It's minimalist art' 🎨",
+            "Ankit's code has more bugs than a rainforest 🐛",
+            "Ankit asked if WiFi comes in different flavors 📶",
+            "Ankit thought JavaScript was coffee-flavored ☕",
+            "Ankit uses sheets like they grow on trees... wait 🌳",
+            "Ankit's browser history is just 'How to Google' 🔍",
+            "Ankit once got lost in a one-way street 🛣️",
+            "Ankit thinks Ctrl+Z works in real life 😅",
+            "Ankit put his phone on airplane mode and threw it expecting it to fly ✈️",
+            "Tony Stark built Iron Man. Ankit can't even build IKEA furniture 🔧",
+            "Amit hired Ankit for comic relief 🎭",
+            "Ankit's Wi-Fi password is 'password123' and he's proud of it 🔐"
+        ];
+
+        function roastAnkit() {
+            const randomRoast = ankitRoasts[Math.floor(Math.random() * ankitRoasts.length)];
+            document.getElementById('ankit-roast').innerHTML = `🔥 ${randomRoast} 🔥`;
+        }
+
+        // Initial roast on page load
+        window.onload = roastAnkit;
+    </script>
+</body>
+</html>
